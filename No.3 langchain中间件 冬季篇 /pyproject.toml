@@ -1,0 +1,12 @@
+[project]
+name = "ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain>=1.2.8",
+    "langchain-classic>=1.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-deepseek>=1.0.1",
+]

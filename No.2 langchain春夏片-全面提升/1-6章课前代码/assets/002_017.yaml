@@ -1,0 +1,15 @@
+_type: prompt
+input_variables:
+- cartoon
+- name
+metadata: null
+name: null
+optional_variables: []
+output_parser: null
+partial_variables: {}
+tags: null
+template: "\u8BF7\u544A\u8BC9\u6211\u52A8\u753B\u7247{cartoon}\u91CC\u9762\u7684\u4E3B\
+  \u89D2{name}\u7684\u7ECF\u5178\u53F0\u8BCD\u662F\u4EC0\u4E48,\u4ED6\u7684\u65E5\u8BED\
+  \u53D1\u97F3\u7528\u4E2D\u6587\u600E\u4E48\u7A7A\u8033"
+template_format: f-string
+validate_template: false

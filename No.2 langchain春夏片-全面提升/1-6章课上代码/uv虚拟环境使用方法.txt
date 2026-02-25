@@ -1,0 +1,6 @@
+先学习uv免费教程如下：
+https://www.bilibili.com/video/BV1Z7mxBXETB/?vd_source=67fcc8918cc5baab5dfbc4c697f53c8e
+然后利用下面2个文件
+pyproject.toml
+uv.lock
+执行uv sync

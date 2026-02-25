@@ -1,0 +1,39 @@
+#with_structured_output()方法,在 llm.with_structured_output()时,把会返回特殊格式
+#传入Pydantic 返回 Pydantic,如果想要json,再调用model_dump_json()
+#模式可以指定为 TypedDict 类、JSON Schema 或 Pydantic 类。
+# 如果使用 TypedDict 或 JSON Schema，则可运行对象将返回一个字典；
+# 如果使用 Pydantic 类，则将返回一个 Pydantic 对象。
+from langchain_core.prompts import ChatPromptTemplate
+from pydantic import BaseModel, Field, field_validator
+class ZhouZhou(BaseModel):
+
+    name: str = Field(description="jojo的奇妙冒险中的一个人物名字")
+    age:int = Field(default=18)
+    @field_validator('age')
+    def validate_age(cls,value):
+        if value < 18:
+            print("未满十八岁")
+            # raise ValueError("西格玛男人,从不落入女人陷阱")
+        if value > 65:
+            print("退休了,可以回家打游戏,到大街上,抽嘎了")
+        return value
+
+import os
+from langchain_deepseek import ChatDeepSeek
+from dotenv import load_dotenv
+load_dotenv("../assets/openai.env")
+llm = ChatDeepSeek(
+    model=os.getenv("MODEL_NAME"),
+     temperature=0.8)
+prompt = ChatPromptTemplate.from_template("给我2个名字")
+stru_llm = llm.with_structured_output(ZhouZhou)#传入了Pydantic的子类,
+print("stru_llm类型是:",type(stru_llm))#类型是:RunnableSequence
+# invoke返回就是这个类型,不能是List多个,
+# 因为我们的ZhouZhou就只有2个字段
+chain = prompt | stru_llm
+# abcd,c,c,c,abcd,c,c,c
+ai_msg = chain.invoke({"count":2})
+print("ai_msg=",ai_msg)
+print("type(ai_msg)=",type(ai_msg))
+json = ai_msg.model_dump_json()#孩怕拼错,这个是模型转json
+print("json",json)

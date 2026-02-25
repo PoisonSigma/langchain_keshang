@@ -1,0 +1,8 @@
+[project]
+name = "demo5-_5" #注意尽量不要起名带符号,因为虚拟环境不带
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]

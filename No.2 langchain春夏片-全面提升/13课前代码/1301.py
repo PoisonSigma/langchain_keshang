@@ -1,0 +1,58 @@
+#下面代码为官网的例子:
+from typing import Annotated
+
+from langchain_core.messages import HumanMessage
+from typing_extensions import TypedDict
+
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
+from dotenv import load_dotenv
+load_dotenv("openai.env")
+class State(TypedDict):
+    #messages 可以修改,这里作用的,保存聊天历史记录
+    messages: Annotated[list, add_messages] #Annotated []是泛型,list是类型,逗号后面add_messages是框架告诉处理数据的规则是添加合并
+    #例如:之前放了你好,ai 返回了 你好,那么就会合并成 列表你好,你好 ,作为完整对话记录
+#Annotated对 messages 的更新将追加到现有列表中，而不是覆盖它。
+graph_builder = StateGraph(State) #创建工作流状态,这里,所有工作流只能处理messages,因为上面的State,只有一个字段
+#这个作用是可以后续添加节点node等
+import os
+from langchain_deepseek import ChatDeepSeek
+from dotenv import load_dotenv
+load_dotenv("../assets/openai.env")
+llm = ChatDeepSeek(
+    model=os.getenv("MODEL_NAME"),
+     temperature=0.8)
+#定义一个节点函数入参上面定义的状态的State类型
+def fun1(state :State):
+    print("fun1,state=",state)
+    return {"messages": [llm.invoke(state["messages"])]} #这里返回一个字典,key是messages,value是个list
+#进入fun1节点以后会执行llm.invoke(state["messages"]) 调用大模型,把结果放在字典 {"messages": }中返回,状态更新为返回了AiMsg的状态
+def fun2(state :State):
+    print("fun2执行")#注意,这时候状态已经改变,工作流会把节点更新的最新放到合并到结尾
+    print("fun2,state=", state)
+    return state #不修改信息,只返回当前状态
+
+graph_builder.add_node("chat",fun1)#参数1字符串,参数2执行操作
+graph_builder.add_node("print_fun2",fun2)#参数1字符串,参数2执行操作
+
+graph_builder.add_edge(START,"chat")#添加一个起始入口点
+graph_builder.add_edge("chat","print_fun2")#添加从fun1 到fun2
+graph_builder.add_edge("print_fun2",END)#添加一个结束点
+#编译图
+graph = graph_builder.compile()#运行之前先编译一下
+#可视化图
+try:
+    #display(Image(graph.get_graph().draw_mermaid_png()))
+    # 生成图片二进制数据
+    png_data = graph.get_graph().draw_mermaid_png()
+    with open("../assets/openai_graph.png", "wb") as f:
+        f.write(png_data)
+        print("工作流图已保存为：langgraph_workflow.png")  # 提示保存路径
+except Exception as e:
+    # This requires some extra dependencies and is optional
+    print("e=",e)
+
+result = graph.invoke({"messages":[HumanMessage(content="你好")]})
+#执行完invoke以后会把{"messages":[HumanMessage(content="你好")]} ,传给图里面的state,进入第一个节点fun1再进入第二个节点fun2
+for item in result["messages"]:
+    print(item)

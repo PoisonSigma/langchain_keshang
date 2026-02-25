@@ -1,0 +1,9 @@
+注意：如果已经学会uv教程，那么直接用uv设置国内镜像后安装速度飞快，优先用uv安装虚拟环境
+查看这个笔记是和视频课程
+#建议按照视频教程使用pycharm用pycharm创建一个虚拟环境,然后把requirements.txt放到项目根目录,
+然后点击其中一个包,就弹出install package,这时候就会把包安装到虚拟环境中
+
+如果用source activate激活虚拟环境使用pip install -r 安装依赖文件,时候要注意,要cd到虚拟环境根目录,然后 bin/pip install 而不是pip install,
+bin/pip 是当前激活的虚拟环境下的pip,而不加bin是系统导出环境变量下的bin,安装的位置不一样
+先创建虚拟环境，再激活虚拟环境，再用pip install -r安装依赖文件requirements.txt
+01_03ab_创建虚拟环境运行课上代码.md 

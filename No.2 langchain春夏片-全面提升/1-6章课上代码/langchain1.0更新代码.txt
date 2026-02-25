@@ -1,0 +1,27 @@
+
+Langchain 1.0以后
+langchain文件夹下面没有原来的文件夹 retrievers 和 schema 和 chains 和 agents
+
+
+langchain.retrievers 里面有的原来暴漏出来的方法 包转移到了 langchain_classic文件夹下的retrievers下面
+
+
+下面是langchain1.0以后更新的代码，导入包修改了路径
+
+03_43RetryOutputParser重试输出解析器.py
+03_45OutputFixingParser输出修复解析器.py
+05_21MultiQueryRetriever例子.py
+05_25文档提取和压缩.py
+
+
+05_30_链中的RunnableBranch.py
+05_33创建历史聊天感知链.py
+05_38创建添加聊天记录的问题链.py
+
+
+06_04agent使用搜索工具.py
+06_06给agent添加聊天记录.py
+
+新增代码和视频课程：
+
+06_10langchain1.0的创建代理create_agent.py （此代码对应视频课程0610和0611）

@@ -1,0 +1,7 @@
+把requirements.txt 放到被激活的虚拟环境目录中，然后执行下面命令给虚拟环境安装包：
+例如Mac激活在终端下cd进入到创建虚拟啊环境后的目录下输入：source activate，然后
+pip install -r requirements.txt 
+忽略证书ssl:
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r a.txt
+
+openai.env.这个文件大家进去填写自己的api key

@@ -1,0 +1,25 @@
+#需要安装defusedxml ,uv add defusedxml
+from langchain_core.output_parsers import XMLOutputParser
+
+xmlStr = """
+<西格玛男人之机智的小军的语言操作手册>
+    <小军来尝尝李阿姨新摘的樱桃时候的回复>
+        <回复1>谢谢李阿姨，这樱桃看起来真新鲜，您的手艺真是越来越好了！</回复1>
+        <回复2>李阿姨，这樱桃真甜，您种的樱桃就是不一样，比市场上卖的好吃多了！</回复2>
+        <回复3>阿姨，您太客气了，这樱桃我可得带点回去给我妈尝尝，她肯定喜欢！</回复3>
+    </小军来尝尝李阿姨新摘的樱桃时候的回复>
+    <小军阿姨心情不太好来陪问姨上去聊聊天如何回答>
+        <回复1>阿姨，听说您最近心情不太好，要不要我陪您去公园走走？散散心可能会好点。</回复1>
+        <回复2>阿姨，有什么烦心事可以跟我说说，我虽然年纪小，但说不定能帮您出出主意呢。</回复2>
+        <回复3>阿姨，我带了点您爱吃的点心，咱们边吃边聊，心情可能会好一些。</回复3>
+    </小军阿姨心情不太好来陪问姨上去聊聊天如何回答>
+</西格玛男人之机智的小军的语言操作手册>
+"""
+
+parser = XMLOutputParser()
+dic1 = parser.invoke(xmlStr)
+# dic1 = parser.parse(xmlStr)
+print(dic1)
+import json
+jsonStr = json.dumps(dic1, ensure_ascii=False, indent=2)
+print("jsonStr=",jsonStr)

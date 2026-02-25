@@ -1,0 +1,30 @@
+[project]
+name = "keshang"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.13.7"
+dependencies = [
+    "langchain>=1.2.0",
+    "dotenv>=0.9.9",
+    "faiss-cpu>=1.13.1",
+    "jieba>=0.42.1",
+    "langchain-community>=0.4.1",
+    "langchain-huggingface>=1.1.0",
+    "langchain-openai>=1.1.1",
+    "nltk>=3.9.2",
+    "openai>=2.9.0",
+    "sentence-transformers>=5.1.2",
+    "langchain-deepseek>=1.0.1",
+    "defusedxml>=0.7.1",
+    "bs4>=0.0.2",
+    "bilibili-api-python>=17.4.0",
+    "langchain-experimental>=0.4.1",
+    "langchain-chroma>=1.0.0",
+    "rank-bm25>=0.2.2",
+    "langgraph-checkpoint-sqlite>=3.0.1",
+    "langgraph>=1.0.5",
+    "msgpack>=1.1.2",
+    "langgraph-checkpoint-postgres>=3.0.2",
+    "psycopg-binary>=3.3.2",
+]
