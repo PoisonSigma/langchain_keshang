@@ -1,0 +1,17 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "poison",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    }
+  ],
+  "generated": "2024-05-27T08:32:10.977440Z",
+  "generator": "pub",
+  "generatorVersion": "3.4.1",
+  "flutterRoot": "file:///Volumes/SN7501T/flutter",
+  "flutterVersion": "3.22.1",
+  "pubCache": "file:///Users/poison/.pub-cache"
+}

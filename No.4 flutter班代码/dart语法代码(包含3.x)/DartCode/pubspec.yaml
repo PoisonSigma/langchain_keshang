@@ -1,0 +1,12 @@
+name: poison
+environment:
+#    sdk: '>=3.0.0'
+#sdk: '>=3.0.0'
+#  sdk: '>=3.2.0'
+  sdk: '>=3.4.1'
+#  下面把dart sdk改成3.0以下的版本
+
+#  通过这条命令更改fluttersdk 和 dart sdk,让dart sdk降低到2.17,这样可以方便切换
+#  git checkout 3.0.0
+#  sdk: '>=2.12.0'
+#  sdk: '>=2.0.0'

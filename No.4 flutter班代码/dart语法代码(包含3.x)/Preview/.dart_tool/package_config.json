@@ -1,0 +1,29 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "clock",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/clock-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "time",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/time-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "poison",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    }
+  ],
+  "generated": "2024-05-25T09:35:43.583349Z",
+  "generator": "pub",
+  "generatorVersion": "3.4.1",
+  "flutterRoot": "file:///Volumes/SN7501T/flutter",
+  "flutterVersion": "3.22.1",
+  "pubCache": "file:///Users/poison/.pub-cache"
+}

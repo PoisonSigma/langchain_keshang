@@ -1,0 +1,12 @@
+fun1(){
+  print("fun1执行");
+}
+fun2(){
+  print("fun2执行");
+}
+fun3(){
+  print("fun3执行");
+}
+fun4(){
+  print("fun4执行");
+}

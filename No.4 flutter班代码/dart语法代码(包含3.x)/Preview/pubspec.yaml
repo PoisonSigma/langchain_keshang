@@ -1,0 +1,25 @@
+name: poison
+#description: xxx
+environment:
+#  sdk: '>=3.3.0'
+#sdk: '>=3.4.1'
+#  sdk: '>=3.4.1'
+  sdk: '^3.4.0'
+#  sdk: '>=3.0.0'
+#  下面把dart sdk改成3.0以下的版本
+#  sdk: '>=2.10.0 <3.0.0'
+  #2.12版本以后支持空安全
+#  sdk: '>=2.12.0'
+#  sdk: '>=2.0.0'
+#  flutter:
+#
+#
+#
+dependencies:
+  #071 time第三方库使用
+  time: "^2.1.3"
+
+linter:
+  rules:
+    - annotate_redeclares
+

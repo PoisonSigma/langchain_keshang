@@ -1,0 +1,35 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "_macros",
+      "rootUri": "file:///Volumes/SN7501T/flutter/bin/cache/dart-sdk/pkg/_macros",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "json",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/json-0.20.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "macros",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/macros-0.1.2-main.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "poison",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    }
+  ],
+  "generated": "2024-08-08T07:09:11.321552Z",
+  "generator": "pub",
+  "generatorVersion": "3.5.0",
+  "flutterRoot": "file:///Volumes/SN7501T/flutter",
+  "flutterVersion": "3.24.0",
+  "pubCache": "file:///Users/poison/.pub-cache"
+}

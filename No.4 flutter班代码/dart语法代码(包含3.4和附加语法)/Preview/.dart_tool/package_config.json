@@ -1,0 +1,113 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "_macros",
+      "rootUri": "file:///Volumes/SN7501T/flutter/bin/cache/dart-sdk/pkg/_macros",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "async",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/async-2.11.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "clock",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/clock-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "collection",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/collection-1.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/http-1.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/http_parser-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "json",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/json-0.20.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "macros",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/macros-0.1.2-main.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "meta",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/meta-1.15.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/path-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "source_span",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/source_span-1.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "string_scanner",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/string_scanner-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "term_glyph",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/term_glyph-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "time",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/time-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "typed_data",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/typed_data-1.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/poison/.pub-cache/hosted/pub.flutter-io.cn/web-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "poison",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    }
+  ],
+  "generated": "2024-08-08T07:54:08.441055Z",
+  "generator": "pub",
+  "generatorVersion": "3.5.0",
+  "flutterRoot": "file:///Volumes/SN7501T/flutter",
+  "flutterVersion": "3.24.0",
+  "pubCache": "file:///Users/poison/.pub-cache"
+}

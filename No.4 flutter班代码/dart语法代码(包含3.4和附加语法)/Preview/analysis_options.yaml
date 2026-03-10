@@ -1,0 +1,4 @@
+analyzer:
+    #下面是为了使用dart3.4的json宏
+  enable-experiment:
+    - macros

@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+main() {
+  runApp(MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('标题栏'),
+          ),
+          body: const HomePage())));
+}
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var list = ["a","b","c"];
+    var colorCodes = [100,200,300];
+    return   ListView.separated(
+      padding: const EdgeInsets.all(8),
+      itemCount: list.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
+          height: 50,
+          color: Colors.yellow[colorCodes[index]],
+          child: Center(child: Text(' ${list[index]}')),
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) =>  Divider(
+        // color: Colors.red[50],//数字越小颜色越淡
+        color:Colors.black12, //黑色没有中括号的颜色
+      height: 40,//高度
+      ),
+    );
+  }
+}
